@@ -240,7 +240,7 @@ flutter build apk --release
 
 | Booking | Cari Kos | Profile |
 |---------|------|---------|
-| <img width="200" alt="Booking" src="(https://github.com/user-attachments/assets/1eb3f62c-1f82-4105-aecc-1e652ed4ca9f"/> | <img width="200" alt="CariKos" src="https://github.com/user-attachments/assets/c17f9636-d879-4dbb-9022-3710db3f5354"/> | <img width="200" alt="Profile" src="https://github.com/user-attachments/assets/23a7a6f0-1aed-48e2-8356-4f44e47982a9"/> |
+| <img width="200" alt="Booking" src="https://github.com/user-attachments/assets/1eb3f62c-1f82-4105-aecc-1e652ed4ca9f"/> | <img width="200" alt="CariKos" src="https://github.com/user-attachments/assets/c17f9636-d879-4dbb-9022-3710db3f5354"/> | <img width="200" alt="Profile" src="https://github.com/user-attachments/assets/23a7a6f0-1aed-48e2-8356-4f44e47982a9"/> |
 
 </div>
 
