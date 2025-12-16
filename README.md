@@ -1,190 +1,320 @@
-```md
-# 🏠 MariKos App
-Aplikasi Pencarian dan Booking Kos — **Flutter + PHP REST API + MySQL**
+# 🏠 MariKos - Aplikasi Pencari Kos
 
----
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-## 📌 Deskripsi Proyek
-**MariKos** adalah aplikasi mobile berbasis Flutter untuk mencari, melihat detail, dan melakukan pemesanan kos. Aplikasi terhubung ke backend **PHP Native** melalui **REST API** dan menggunakan **MySQL/MariaDB** sebagai database.
+Aplikasi mobile berbasis Android untuk mempermudah pencarian dan pemesanan rumah kos secara online dengan fitur lengkap seperti booking, pembayaran digital, dan komunikasi real-time.
 
-Proyek ini dikembangkan untuk **UTS/UAS Pemrograman Perangkat Bergerak (PPB)** dengan fokus implementasi **CRUD + API + integrasi Flutter**.
+## 📋 Deskripsi Project
 
----
+MariKos adalah aplikasi pencari kos yang dikembangkan sebagai project Ujian Akhir Semester (UAS) mata kuliah Pemrograman Perangkat Bergerak. Aplikasi ini menyediakan platform digital untuk menghubungkan pencari kos dengan pemilik kos, dilengkapi dengan fitur pencarian, detail informasi, booking, pembayaran, dan komunikasi langsung.
 
-## 🛠️ Teknologi
-- **Frontend**: Flutter (Dart)
-- **Backend**: PHP Native (REST API)
-- **Database**: MySQL / MariaDB
-- **Format Data**: JSON
-- **Web Server**: Apache (XAMPP)
-- **Tools**: phpMyAdmin, Postman, Android Studio / VS Code
+**Project ini fokus pada implementasi:**
+- ✅ CRUD (Create, Read, Update, Delete) operations
+- ✅ PHP REST API integration
+- ✅ MySQL database management
+- ✅ Flutter cross-platform development
 
----
+## 👥 Tim Pengembang
+
+| Nama | NIM |
+|------|-----|
+| **Irzha Adji Prabowo** | 2310631250093 |
+| **Yogi Cahyono** | 2310631250039 |
+| **Muhammad Aziz Sutawijaya** | 2310631250095 |
+**Dosen Pengampu:** Purwantoro, S.Kom., M.Kom  
+**Program Studi:** Sistem Informasi  
+**Universitas:** Universitas Singaperbangsa Karawang  
+**Tahun:** 2025
 
 ## ✨ Fitur Utama
-### 👤 Autentikasi
-- Login user dan admin
-- Register user baru
-- Role-based access (Admin & User)
 
-### 🏘️ Data Kos
-- List kos (dinamis dari API)
-- Detail kos (dinamis dari API)
-- Pencarian kos
-- Status ketersediaan kos
+### 🔐 Autentikasi & Otorisasi
+- Login dan Register dengan role-based access (Admin & User)
+- Validasi data pengguna
+- Session management
 
-### 📦 Booking Kos
-- Booking kos
-- Perhitungan total harga otomatis
-- Riwayat booking user
-- Status booking: `pending`, `disetujui`, `ditolak`
+### 🔍 Pencarian & Filter
+- Pencarian kos berdasarkan nama, lokasi, dan fasilitas
+- Filter berdasarkan harga, jenis kos (Putra/Putri/Campur)
+- Sorting hasil pencarian
 
-### 🛠️ Admin (CRUD)
-- Tambah kos
-- Edit kos
-- Hapus kos
-- CRUD penuh data kos
+### 🏘️ Manajemen Kos (Admin)
+- CRUD data kos (Create, Read, Update, Delete)
+- Upload foto kos
+- Update status ketersediaan
+- Kelola informasi detail (fasilitas, harga, lokasi)
 
----
+### 📱 Detail Informasi Kos
+- Tampilan detail lengkap kos
+- Informasi fasilitas
+- Harga dan lokasi
+- Kontak pemilik
 
-## 🗂️ Struktur Repository
+### 📅 Sistem Booking
+- Pemesanan kos online
+- Pilih tanggal masuk dan durasi sewa
+- Perhitungan otomatis total biaya
+- Status booking (Pending, Disetujui, Ditolak, Lunas)
 
-### 📱 Frontend (Flutter)
+### 💳 Pembayaran Digital
+- Informasi pembayaran
+- Konfirmasi pembayaran
+- Riwayat transaksi
+
+### 💬 Fitur Chat
+- Komunikasi real-time antara user dan pemilik kos
+- Chat list untuk manajemen percakapan
+
+### 👤 Profil Pengguna
+- Kelola data pribadi
+- Riwayat pemesanan
+- Logout
+
+## 🛠️ Teknologi yang Digunakan
+
+### Frontend
+- **Framework:** Flutter 3.x
+- **Language:** Dart
+- **State Management:** setState / Provider
+- **HTTP Client:** http package
+- **UI Components:** Material Design
+
+### Backend
+- **Language:** PHP Native
+- **Architecture:** RESTful API
+- **Database:** MySQL
+- **Server:** Apache (XAMPP/WAMP)
+
+### Database
+- **DBMS:** MySQL
+- **Database Name:** db_marikos
+- **Tables:** users, kos, booking
+
+## 📁 Struktur Project
+
+```
+Marikos_App/
+├── Marikos/                    # Flutter Application
+│   └── Marikos/
+│       ├── lib/
+│       │   ├── main.dart      # Entry point aplikasi
+│       │   ├── models/        # Data models
+│       │   ├── pages/         # UI screens
+│       │   │   ├── login_page.dart
+│       │   │   ├── register_page.dart
+│       │   │   ├── home_page.dart
+│       │   │   ├── search_page.dart
+│       │   │   ├── detail_kos_page.dart
+│       │   │   ├── booking_page.dart
+│       │   │   ├── chat_page.dart
+│       │   │   ├── profile_page.dart
+│       │   │   └── ...
+│       │   ├── services/      # API services
+│       │   └── widgets/       # Reusable widgets
+│       └── pubspec.yaml
+│
+├── marikos_api/               # PHP REST API Backend
+│   └── marikos_api/
+│       ├── config/            # Database configuration
+│       ├── api/               # API endpoints
+│       │   ├── login.php
+│       │   ├── register.php
+│       │   ├── get_kos.php
+│       │   ├── create_kos.php
+│       │   ├── update_kos.php
+│       │   ├── delete_kos.php
+│       │   ├── booking.php
+│       │   └── ...
+│       └── uploads/           # Upload directory
+│
+└── db_marikos.sql             # Database schema
 ```
 
-marikos/
-├── lib/
-│   ├── main.dart
-│   ├── home_page.dart
-│   ├── login_page.dart
-│   ├── kos_detail_page.dart
-│   ├── booking_page.dart
-│   ├── search_page.dart
-│   ├── profile_page.dart
-│   ├── chat_page.dart
-│   ├── chat_list_page.dart
-│   ├── models.dart
-│   └── services/
-│       └── api_service.dart
-└── pubspec.yaml
+## 📊 Struktur Database
 
+### Tabel: users
+```sql
+- id (INT, PRIMARY KEY, AUTO_INCREMENT)
+- nama (VARCHAR)
+- email (VARCHAR)
+- password (VARCHAR)
+- role (ENUM: 'admin', 'user')
+- alamat (TEXT)
+- no_telp (VARCHAR)
+- ktp (VARCHAR)
 ```
 
-### 🌐 Backend (PHP API)
+### Tabel: kos
+```sql
+- id (INT, PRIMARY KEY, AUTO_INCREMENT)
+- nama (VARCHAR)
+- alamat (TEXT)
+- harga (INT)
+- fasilitas (TEXT)
+- jenis_kos (VARCHAR: 'Putra', 'Putri', 'Campur')
+- pemilik (VARCHAR)
+- status (ENUM: 'tersedia', 'penuh')
+- foto (VARCHAR)
 ```
 
-marikos_api/
-├── conn.php
-├── auth/
-│   ├── login.php
-│   └── register.php
-├── kos/
-│   ├── read_kos.php
-│   ├── detail_kos.php
-│   ├── create_kos.php
-│   ├── update_kos.php
-│   └── delete_kos.php
-└── booking/
-├── create_booking.php
-└── read_booking_user.php
-
+### Tabel: booking
+```sql
+- id (INT, PRIMARY KEY, AUTO_INCREMENT)
+- user_id (INT, FOREIGN KEY)
+- kos_id (INT, FOREIGN KEY)
+- tanggal_masuk (DATE)
+- lama_sewa (INT)
+- total_harga (INT)
+- status (ENUM: 'pending', 'disetujui', 'ditolak', 'lunas')
+- catatan (TEXT)
+- created_at (TIMESTAMP)
+- updated_at (TIMESTAMP)
 ```
 
----
+## 🚀 Cara Instalasi
 
-## 🗄️ Database
-Database: **`db_marikos`** (file: `db_marikos.sql`)
+### Prerequisites
+- Flutter SDK (3.x atau lebih baru)
+- Dart SDK
+- Android Studio / VS Code
+- XAMPP / WAMP (untuk PHP & MySQL)
+- Git
 
-Tabel utama:
-- `users`
-- `kos`
-- `booking`
+### Langkah Instalasi
 
-Relasi:
-- `booking.user_id` → `users.id`
-- `booking.kos_id` → `kos.id`
-
----
-
-## 🚀 Cara Menjalankan Proyek
-
-### 1️⃣ Setup Backend (API)
-1. Jalankan **XAMPP**
-2. Aktifkan **Apache** dan **MySQL**
-3. Import database:
-   - Buka phpMyAdmin
-   - Import file `db_marikos.sql`
-4. Letakkan folder `marikos_api` ke:
-```
-
-htdocs/
-
-````
-5. Cek endpoint contoh:
-- `http://localhost/marikos_api/kos/read_kos.php`
-
----
-
-### 2️⃣ Setup Flutter
-1. Masuk ke folder project Flutter
-2. Install dependencies:
+#### 1. Clone Repository
 ```bash
+git clone https://github.com/IrzhaAdji28/Marikos_App.git
+cd Marikos_App
+```
+
+#### 2. Setup Database
+```bash
+# Buka phpMyAdmin
+# Import file db_marikos.sql
+# Atau via command line:
+mysql -u root -p < db_marikos.sql
+```
+
+#### 3. Setup Backend API
+```bash
+# Copy folder marikos_api ke htdocs (XAMPP) atau www (WAMP)
+cp -r marikos_api C:/xampp/htdocs/
+
+# Edit config database di marikos_api/config/database.php
+# Sesuaikan dengan konfigurasi MySQL Anda
+```
+
+#### 4. Setup Flutter App
+```bash
+cd Marikos/Marikos
+
+# Install dependencies
 flutter pub get
-````
 
-3. Pastikan `baseUrl` di `api_service.dart` sesuai:
+# Edit base URL API di lib/services/api_service.dart
+# Sesuaikan dengan IP/domain server Anda
 
-   ```dart
-   static const String baseUrl = "http://10.0.2.2/marikos_api";
-   ```
+# Run aplikasi
+flutter run
+```
 
-   > Catatan:
-   >
-   > * `10.0.2.2` khusus Android Emulator (mengarah ke localhost PC).
-   > * Untuk HP fisik, ganti dengan IP LAN PC kamu, contoh: `http://192.168.1.10/marikos_api`
+#### 5. Build APK (Opsional)
+```bash
+flutter build apk --release
+```
 
-4. Jalankan:
+## 📱 Screenshot Aplikasi
 
-   ```bash
-   flutter run
-   ```
+<div align="center">
 
----
+| Login | Home | Detail Kos |
+|-------|------|------------|
+| <img src="docs/images/login.png" width="200"/> | <img src="docs/images/home.png" width="200"/> | <img src="docs/images/detail.png" width="200"/> |
 
-## 🔑 Akun Dummy (Testing)
+| Booking | Chat | Profile |
+|---------|------|---------|
+| <img src="docs/images/booking.png" width="200"/> | <img src="docs/images/chat.png" width="200"/> | <img src="docs/images/profile.png" width="200"/> |
 
-### Admin
+</div>
 
-* Email: `admin@marikos.com`
-* Password: `admin123`
+## 🔧 API Endpoints
+
+### Authentication
+```
+POST /api/login.php          - Login user
+POST /api/register.php       - Register user baru
+```
+
+### Kos Management
+```
+GET  /api/get_kos.php        - Get semua data kos
+GET  /api/get_kos.php?id=1   - Get detail kos by ID
+POST /api/create_kos.php     - Create kos baru (Admin)
+PUT  /api/update_kos.php     - Update data kos (Admin)
+DELETE /api/delete_kos.php   - Delete kos (Admin)
+GET  /api/search_kos.php     - Search dan filter kos
+```
+
+### Booking
+```
+GET  /api/get_booking.php    - Get semua booking
+POST /api/create_booking.php - Create booking baru
+PUT  /api/update_booking.php - Update status booking
+```
 
 ### User
-
-* Email: `budi@example.com`
-* Password: `budi123`
-
----
-
-## 📚 Konsep yang Diterapkan
-
-* CRUD (Create, Read, Update, Delete)
-* RESTful API
-* Client–Server Architecture
-* Relational Database
-* Role-Based Access Control
-* JSON Data Exchange
-
----
-
-## 👨‍💻 Tim Pengembang
-
-Proyek ini dikembangkan oleh **Kelompok MariKos** untuk kebutuhan akademik (PPB).
-
----
-
-## 📄 Lisensi
-
-Proyek ini dibuat untuk **keperluan akademik dan pembelajaran** (non-komersial).
-
 ```
+GET  /api/get_profile.php    - Get user profile
+PUT  /api/update_profile.php - Update user profile
 ```
+
+## 🎯 Use Case Diagram
+
+Sistem memiliki 2 aktor utama:
+- **User (Customer)**: Mencari kos, booking, chat dengan pemilik
+- **Admin (Pemilik Kos)**: Kelola kos, kelola booking, chat dengan customer
+
+## 📈 Pengembangan Lebih Lanjut
+
+Fitur yang dapat ditambahkan di masa mendatang:
+- [ ] Integrasi payment gateway (Midtrans/Xendit)
+- [ ] Notifikasi push
+- [ ] Rating dan review kos
+- [ ] Integrasi Google Maps untuk lokasi
+- [ ] Fitur wishlist/favorit
+- [ ] Export laporan untuk admin
+- [ ] Verifikasi email/SMS
+- [ ] Multiple payment methods
+
+## 📝 Lisensi
+
+Project ini dibuat untuk keperluan akademik sebagai tugas UAS Pemrograman Perangkat Bergerak.
+
+## 📞 Kontak
+
+Untuk pertanyaan atau diskusi lebih lanjut, silakan hubungi:
+
+- **Irzha Adji Prabowo** - [GitHub](https://github.com/IrzhaAdji28)
+- **Email**: -
+- **Institution**: Universitas Singaperbangsa Karawang
+
+## 🙏 Acknowledgments
+
+- Terima kasih kepada Bapak Purwantoro, S.Kom., M.Kom. sebagai dosen pengampu
+- Flutter dan Dart community
+- Stack Overflow dan developer community
+- Semua pihak yang telah membantu dalam pengembangan project ini
+
+---
+
+<div align="center">
+
+**⭐ Star project ini jika bermanfaat!**
+
+Made with ❤️ by Kelompok 8 - Sistem Informasi UNSIKA
+
+</div>
