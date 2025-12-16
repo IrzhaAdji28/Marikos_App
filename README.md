@@ -24,6 +24,8 @@ MariKos adalah aplikasi pencari kos yang dikembangkan sebagai project Ujian Akhi
 | **Irzha Adji Prabowo** | 2310631250093 |
 | **Yogi Cahyono** | 2310631250039 |
 | **Muhammad Aziz Sutawijaya** | 2310631250095 |
+
+
 **Dosen Pengampu:** Purwantoro, S.Kom., M.Kom  
 **Program Studi:** Sistem Informasi  
 **Universitas:** Universitas Singaperbangsa Karawang  
@@ -233,12 +235,12 @@ flutter build apk --release
 
 | Login | Home | Detail Kos |
 |-------|------|------------|
-| <img src="![Gambar WhatsApp 2025-12-16 pukul 00 31 13_ad8be614](https://github.com/user-attachments/assets/b652fa80-6f36-4c41-a208-e366881f593f)
-" width="200"/> | <img src="docs/images/home.png" width="200"/> | <img src="docs/images/detail.png" width="200"/> |
+| <img width="200" alt="Login" src="https://github.com/user-attachments/assets/29f9a24f-777d-4c44-bf6c-bc3a588b83f3"/> | <img width="200" alt="Home" src="https://github.com/user-attachments/assets/b1fe7d62-e58b-465f-bf46-8bbc27e1756e"/> | <img width="200" alt="DetailKos" src="https://github.com/user-attachments/assets/5d12e2a7-b4db-482d-af35-5c3e9733ff78"/> |
 
-| Booking | Chat | Profile |
+
+| Booking | Cari Kos | Profile |
 |---------|------|---------|
-| <img src="docs/images/booking.png" width="200"/> | <img src="docs/images/chat.png" width="200"/> | <img src="docs/images/profile.png" width="200"/> |
+| <img width="200" alt="Booking" src="(https://github.com/user-attachments/assets/1eb3f62c-1f82-4105-aecc-1e652ed4ca9f"/> | <img width="200" alt="CariKos" src="https://github.com/user-attachments/assets/c17f9636-d879-4dbb-9022-3710db3f5354"/> | <img width="200" alt="Profile" src="https://github.com/user-attachments/assets/23a7a6f0-1aed-48e2-8356-4f44e47982a9"/> |
 
 </div>
 
